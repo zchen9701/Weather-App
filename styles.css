@@ -1,0 +1,146 @@
+    /* Unsplash API KEY(to get random background image):
+5-D1qeAP_6hLpmRut0hAM4keBGlmoLT6SLwpMwF5Ljs
+ */
+    /* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        background: #222;
+        background-image: url("https://source.unsplash.com/1600x900/?city");
+    }
+    
+    .logo {
+        color: white;
+    }
+    
+    footer p {
+        color: floralwhite;
+        font-weight: 300;
+        position: absolute;
+        font-size: smaller;
+        bottom: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-style: italic;
+    }
+    
+    .api-container {
+        background: #000000d0;
+        color: white;
+        padding: 2em;
+        border-radius: 30px;
+        width: 100%;
+        max-width: 420px;
+        /* text-align: center; */
+        margin: 1em;
+    }
+    
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    button {
+        margin: 7px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        height: 41px;
+        width: 41px;
+        /* background: #7F8487; */
+        background: #7c7c7c2b;
+        color: #DDD;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
+    
+    input.search-bar {
+        border: none;
+        outline: none;
+        padding: .4em 1em;
+        border-radius: 30px;
+        background: #7c7c7c2b;
+        color: white;
+        font-family: inherit;
+        font-size: 120%;
+        width: calc(100% - 80px);
+    }
+    
+    button:hover {
+        background: #7f8487;
+        color: white;
+    }
+    
+     ::placeholder {
+        color: #7f8487;
+        text-align: left;
+        font-size: 15px;
+    }
+    
+    img.icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    h1.temp {
+        font-size: 2.5em;
+        font-weight: 500;
+        margin-top: -5px;
+    }
+    
+    h2.city {
+        font-weight: 600;
+    }
+    
+    .description {
+        text-transform: capitalize;
+        font-style: italic;
+    }
+    
+    .flex {
+        display: flex;
+        align-items: center;
+        margin-top: -25px;
+        margin-left: -8px;
+    }
+    
+    .sunrise,
+    .sunset {
+        display: flex;
+        align-items: center;
+        margin-top: 3px;
+    }
+    
+    #sunset-time,
+    #sunrise-time {
+        margin-left: 7px;
+    }
+    
+    .weather.loading {
+        visibility: visible;
+        max-height: 20px;
+        position: relative;
+    }
+    
+    .weather.loading:after {
+        visibility: visible;
+        content: "Loading...";
+        color: white;
+        position: absolute;
+        top: 0
+    }
